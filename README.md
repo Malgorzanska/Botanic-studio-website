@@ -7,3 +7,6 @@ Used technologies:
 - Sass
 - Webpack
 - HTML5
+
+
+See the results here: https://botanic-studio-app.herokuapp.com/
