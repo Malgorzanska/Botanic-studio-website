@@ -1,0 +1,90 @@
+@import "../modules/colors";
+@import "../modules/all";
+
+.sectionTwo {
+  font-size: 0;
+  .tilesRow {
+    display: flex;
+    width: 100%;
+    @media only screen and (max-width: $bp-portrait ){
+      flex-wrap: wrap;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: $overlayColor;
+    }
+
+    .articleContainer:hover .overlay {
+      opacity: 0.8;
+      .smallText{
+        transform: translateY(0);
+      }
+    }
+
+    .articleContainer{
+      position: relative;
+    }
+
+    .textImage {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      .mainText{
+        color: white;
+        font-size: 1.8rem;
+      }
+      .smallText {
+        color: $mainDetailColor;
+        font-size: 1rem;
+        transform: translateY(10px);
+        transition: all 1s ease-out;
+      }
+    }
+
+    .smallContainer {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: $bp-portrait){
+        width: 100%;
+      }
+      .articleContainer{
+        width: 50%;
+      }
+      .smallImage{
+        height: 50vh;
+        width: 100%;
+      }
+    }
+
+    .bigContainer {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      @media only screen and (max-width: $bp-portrait ){
+        width: 100%;
+      }
+      .bigImage {
+        width: 100%;
+        height: 100vh;
+      }
+      .articleContainer{
+        width: 100%;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,105 @@
+@import "../modules/all";
+@import "../modules/colors";
+
+
+.link-menu {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & ul li {
+    display: block;
+    height: 40px;
+    width: 180px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow-x: hidden;
+
+    & a {
+      color: rgba(255,255,255, 0.8);
+      font-weight: 800;
+      text-transform: uppercase;
+      padding-left: 15%;
+      display: block;
+      width: 85%;
+      height: 100%;
+      font-size: 24px;
+      line-height: 42px;
+      text-decoration: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: $mainDetailColor;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 5%;
+      z-index: 0;
+      @include transition;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 5%;
+  top: 5vh;
+  @media only screen and (max-width: $bp-mobile){
+    right: 10%;
+  }
+}
+
+.bm-cross {
+  background: white;
+  margin-left: 15%;
+}
+
+.bm-burger-bars,
+.bm-menu {
+  background: $mainDarkColor;
+}
+
+.bm-cross-button {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.bm-overlay {
+  top:0;
+  left:0;
+}
+
+.bm-menu-wrap {
+  top:0;
+  height: 100vh;
+  width: 50% !important;
+  @media only screen and (max-width: $bp-mobile) {
+    width: 70% !important;
+  }
+  .bm-menu {
+    font-size: 1.30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bm-item-list {
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+@import "../modules/all";
+@import "../modules/colors";
+
+.contact {
+  color: $mainDarkColor;
+  width:100%;
+  height: 80vh;
+  display: flex;
+  background-image: url("/../../images/plant.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 5000px 0 0 0 rgba(255, 255, 255, 0.5);
+  padding: 6rem 5rem 3rem;
+  flex-wrap: wrap-reverse;
+  @media only screen and (max-width: $bp-portrait) {
+    height: unset;
+    min-height: 800px;
+  }
+  article {
+    width: 50%;
+    @media only screen and (max-width: $bp-portrait) {
+      width: 100%;
+    }
+  }
+
+  .contactText-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media only screen and (max-width: $bp-portrait) {
+      text-align: center;
+      font-size: 14px;
+    }
+    .contactText-main {
+      padding: 1rem 6rem 2.5rem 0;
+      @media only screen and (max-width: $bp-portrait) {
+        padding: 0 9rem 1rem 9rem;
+      }
+      @media only screen and (max-width: $bp-mobile) {
+        padding: 1rem 3rem;
+      }
+    }
+    .contactText-header {
+      padding: 2.5rem 0;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .contactForm {
+    display: flex;
+    align-items: center;
+    .form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @media only screen and (max-width: $bp-portrait) {
+        align-items: center;
+      }
+      input,
+      textarea{
+        width: 80%;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        @media only screen and (max-width: $bp-portrait) {
+          width: 60%;
+        }
+        @media only screen and (max-width: $bp-phablet) {
+          width: 95%;
+        }
+      }
+      textarea{
+        resize: none;
+        height: 7rem;
+      }
+      button {
+        width: 11rem;
+        background-color: $mainDarkColor;
+        color: #fff;
+        padding: 1rem;
+        cursor: pointer;
+        border: none;
+        transition: background 250ms ease-in-out,
+        transform 150ms ease;
+        @media only screen and (max-width: $bp-portrait) {
+          width: 27%;
+        }
+        @media only screen and (max-width: $bp-mobile) {
+          width: 45%;
+        }
+        &:hover,
+        &:focus {
+          background: $mainDetailColor;
+        }
+        &:focus {
+          outline: 1px solid #fff;
+          outline-offset: -4px;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+.social-icons {
+  display:flex;
+  .wrapper{
+    margin: 0 auto;
+    img{
+      height: 1.5rem;
+      width:1.5rem;
+      margin: 4rem 1rem;
+      &:hover{
+        opacity: 0.3;
+      }
+    }
+  }
+}
